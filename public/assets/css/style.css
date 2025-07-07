@@ -117,3 +117,7 @@ header>nav {
     top: -0.6em;
     font-size: 60%; 
 }
+
+#map {
+    height: 400px;
+}

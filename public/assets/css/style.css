@@ -65,8 +65,12 @@ header>nav {
 }
 
 /* Make GlideJS take up the whole div */
-.glide, .glide__track, .glide__slides, .glide__slide {
+.glide,
+.glide__track,
+.glide__slides,
+.glide__slide {
     height: 100%;
+    pointer-events: none;
 }
 
 /* Make img slide always fit the div */
@@ -123,7 +127,17 @@ header>nav {
 .superscript {
     position: relative;
     top: -0.6em;
-    font-size: 60%; 
+    font-size: 60%;
+}
+
+/* Calendar */
+.calendar-card {
+    height: 100%;
+}
+
+#calendar {
+    width: 100%;
+    padding: 50px;
 }
 
 /* Map needs a set height to work */

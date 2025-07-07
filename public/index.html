@@ -16,6 +16,9 @@
     <!-- Optional CSS for GlideJS -->
     <link rel="stylesheet" href="./assets/css/glide.theme.min.css">
 
+    <!-- GlideJS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -28,8 +31,12 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
     <!-- ScrollSmoother requires ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+    <!-- FullCalendar -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js'></script>
 
     <title>Travel Blog</title>
 </head>
@@ -44,7 +51,7 @@
                 </a>
 
                 <nav>
-                    <a href="" id="home-btn">Home</a>
+                    <a href="#home">Home</a>
                     <a href="#blog">Blog</a>
                     <a href="#about">About</a>
                 </nav>
@@ -77,8 +84,8 @@
                 </div>
             </section>
 
-            <section class="card">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, deserunt?
+            <section class="card calendar-card">
+                <div id="calendar"></div>
             </section>
 
             <!-- Map for Leaflet -->
@@ -88,48 +95,17 @@
 
     <script src="./assets/js/main.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-
     <!-- Settings for GlideJS -->
-    <script>
-        new Glide('.glide', {
-            autoplay: 3000,
-            hoverpause: false,
-            gap: 0,
-            keyboard: false,
-            swipeThreshold: false,
-            dragThreshold: false
-        }).mount()
-    </script>
+    <script src="./assets/js/glidejs.js"></script>
 
     <!-- Leaflet Map -->
-    <script>
-        var map = L.map('map').setView([43.654804586268135, -79.39846256076028], 16);
-
-        // Put the map in
-        L.tileLayer('https://api.maptiler.com/maps/outdoor-v2/{z}/{x}/{y}@2x.png?key=ECRdJfI9HWDxsPqNic7O', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-
-        // Put a marker on the map
-        var marker = L.marker([43.654804586268135, -79.39846256076028]).addTo(map);
-
-        // Add text to marker
-        marker.bindPopup("Yume Arcade").openPopup();
-    </script>
+    <script src="./assets/js/leaflet.js"></script>
 
     <!-- GSAP Smooth Scrolling -->
-    <script>
-        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    <script src="./assets/js/gsap.js"></script>
 
-        // create the scrollSmoother before your scrollTriggers
-        let smoother = ScrollSmoother.create({
-            smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-            effects: true, // looks for data-speed and data-lag attributes on elements
-            smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-        });
-    </script>
+    <!-- FullCalendar -->
+    <script src="./assets/js/fullcalendar.js"></script>
 </body>
 
 </html>

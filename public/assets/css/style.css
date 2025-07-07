@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Font overrides */
 body {
     background-color: gray;
 
@@ -13,6 +14,7 @@ body {
     outline: 1px solid red !important;
 } */
 
+/* Nav Bar */
 header {
     background-color: white;
     height: 60px;
@@ -49,6 +51,7 @@ header>nav {
     gap: 15px;
 }
 
+/* Section Card Template */
 .card {
     background-color: white;
     width: 100%;
@@ -61,16 +64,19 @@ header>nav {
     overflow: hidden;
 }
 
+/* Make GlideJS take up the whole div */
 .glide, .glide__track, .glide__slides, .glide__slide {
     height: 100%;
 }
 
+/* Make img slide always fit the div */
 .glide__slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Make GlideJS darker for hero banner text */
 .glide::before {
     content: '';
     position: absolute;
@@ -87,6 +93,7 @@ header>nav {
     position: relative;
 }
 
+/* Put text in hero banner in the center */
 .glide-hero {
     position: absolute;
     z-index: 2;
@@ -112,12 +119,14 @@ header>nav {
     font-weight: 400;
 }
 
+/* Copyright Symbol */
 .superscript {
     position: relative;
     top: -0.6em;
     font-size: 60%; 
 }
 
+/* Map needs a set height to work */
 #map {
     height: 400px;
 }

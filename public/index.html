@@ -37,6 +37,7 @@
 <body>
     <div id="smooth-wrapper">
         <div id="smooth-content">
+            <!-- Nav Bar -->
             <header>
                 <a href="#home">
                     <img src="./assets/raster/Logo.png" alt="Logo Image">
@@ -49,7 +50,9 @@
                 </nav>
             </header>
 
+            <!-- Hero Banner -->
             <section class="card">
+                <!-- GlideJS Setup -->
                 <div class="glide">
                     <div class="glide-hero">
                         <h1>Welcome to OneOfThe<span class="superscript">©</span> Travel Blogs!</h1>
@@ -71,14 +74,14 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-                    </div> -->
                 </div>
             </section>
+
             <section class="card">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, deserunt?
             </section>
+
+            <!-- Map for Leaflet -->
             <div id="map"></div>
         </div>
     </div>
@@ -87,6 +90,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
+    <!-- Settings for GlideJS -->
     <script>
         new Glide('.glide', {
             autoplay: 3000,
@@ -98,19 +102,24 @@
         }).mount()
     </script>
 
+    <!-- Leaflet Map -->
     <script>
         var map = L.map('map').setView([43.654804586268135, -79.39846256076028], 16);
 
+        // Put the map in
         L.tileLayer('https://api.maptiler.com/maps/outdoor-v2/{z}/{x}/{y}@2x.png?key=ECRdJfI9HWDxsPqNic7O', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
+        // Put a marker on the map
         var marker = L.marker([43.654804586268135, -79.39846256076028]).addTo(map);
 
+        // Add text to marker
         marker.bindPopup("Yume Arcade").openPopup();
     </script>
 
+    <!-- GSAP Smooth Scrolling -->
     <script>
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 

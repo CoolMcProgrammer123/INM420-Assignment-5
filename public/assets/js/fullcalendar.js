@@ -17,50 +17,38 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         events: [
             {
-                title: 'All Day Event',
-                start: '2025-07-01'
+                title: 'Opening Ceremony',
+                start: '2025-07-01',
+                end: '2025-07-03'
             },
             {
-                title: 'Long Event',
+                title: 'Mont Tremblant',
+                start: '2025-07-04',
+                end: '2025-07-06'
+            },
+            {
+                title: 'Blue Mountain',
                 start: '2025-07-07',
                 end: '2025-07-10'
             },
             {
-                groupId: '999',
-                title: 'Repeating Event',
-                start: '2025-07-09T16:00:00'
-            },
-            {
-                groupId: '999',
-                title: 'Repeating Event',
-                start: '2025-07-16T16:00:00'
-            },
-            {
-                title: 'Conference',
+                title: 'Niagara Glen Trail',
                 start: '2025-07-11',
-                end: '2025-07-13'
+                end: '2025-07-15'
             },
             {
-                title: 'Meeting',
-                start: '2025-07-12T10:30:00',
-                end: '2025-07-12T12:30:00'
+                title: 'Wasaga Beach',
+                start: '2025-07-16',
+                end: '2025-07-18'
             },
             {
-                title: 'Lunch',
-                start: '2025-07-12T12:00:00'
+                title: 'Downtown',
+                start: '2025-07-21',
+                end: '2025-07-23'
             },
             {
-                title: 'Meeting',
-                start: '2025-07-12T14:30:00'
-            },
-            {
-                title: 'Birthday Party',
-                start: '2025-07-13T07:00:00'
-            },
-            {
-                title: 'Click for Google',
-                url: 'https://google.com/',
-                start: '2025-07-28'
+                title: 'Closing',
+                start: '2025-07-24'
             }
         ]
     });

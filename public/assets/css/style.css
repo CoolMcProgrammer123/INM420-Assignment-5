@@ -130,17 +130,61 @@ header>nav {
     font-size: 60%;
 }
 
+.blog {
+    height: 100%;
+}
+
+.blog-body {
+    max-width: 800px;
+    width: 100%;
+    padding: 50px;
+
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.blog-body h1:first-of-type {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.blog-body h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.blog-body p {
+    font-size: 16px;
+    line-height: 20px;
+    text-indent: 50px;
+}
+
 /* Calendar */
 .calendar-card {
     height: 100%;
 }
 
 #calendar {
+    min-height: 600px;
+    max-width: 800px;
     width: 100%;
-    padding: 50px;
+    padding: 30px;
 }
 
 /* Map needs a set height to work */
 #map {
     height: 400px;
+}
+
+:root {
+    --fc-small-font-size: 1rem;
+    --fc-border-color: lightgray;
+    --fc-event-bg-color: rgb(49, 49, 49);
+    --fc-event-border-color: rgb(49, 49, 49);
+    --fc-event-text-color: rgb(255, 255, 255);
+    --fc-event-resizer-thickness: 20px;
+    --fc-today-bg-color: #00000018;
 }

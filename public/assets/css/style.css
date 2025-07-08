@@ -130,6 +130,7 @@ header>nav {
     font-size: 60%;
 }
 
+/* Blog Text */
 .blog {
     height: 100%;
 }
@@ -144,6 +145,12 @@ header>nav {
     align-items: center;
     flex-direction: column;
     gap: 16px;
+}
+
+.blog-body .author {
+    align-self: flex-start;
+    text-indent: 0;
+    color: gray;
 }
 
 .blog-body h1:first-of-type {
